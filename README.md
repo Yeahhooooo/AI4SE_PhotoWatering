@@ -10,14 +10,17 @@
 - 处理后图片自动保存到原目录名加 _watermark 的子目录
 
 ## 使用方法
-1. 编译项目：
-	```shell
-	javac -d out src/cli/*.java src/exif/*.java src/image/*.java src/watermark/*.java
-	```
+
+1. 编译与打包项目（推荐Maven）：
+  ```shell
+  mvn clean package
+  ```
+  首次运行会自动下载依赖。
+
 2. 运行程序：
-	```shell
-	java -cp out cli.Main -p <图片路径或目录> [-s 字体大小] [-c 字体颜色] [-pos 位置]
-	```
+  ```shell
+  java -cp target/photo-watering-1.0-SNAPSHOT.jar cli.Main -p <图片路径或目录> [-s 字体大小] [-c 字体颜色] [-pos 位置]
+  ```
 
 ## 参数说明
 - `-p` 或 `--path`：必填，图片文件或目录路径
